@@ -8,6 +8,10 @@
             parent::__construct( $nom, $prenom, $telephone, $email, $password);
         }
 
+        public function addCours(){
+            
+        }
+
     }
 
 ?>

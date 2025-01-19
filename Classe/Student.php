@@ -19,6 +19,10 @@ class Student extends User
         return $cours;
     }
 
+    public function addCours(){
+        
+    }
+
 
     
     

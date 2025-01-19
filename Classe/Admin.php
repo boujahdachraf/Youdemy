@@ -13,5 +13,6 @@ require_once __DIR__ . '/User.php';
             $users = $stmt->fetchAll(PDO::FETCH_ASSOC); 
             return $users;
         }
+        public function addCours(){}
         
     }

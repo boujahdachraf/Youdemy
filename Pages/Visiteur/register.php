@@ -17,21 +17,24 @@ if (isset($_POST['create'])) {
     $email = $_POST['email'];
     $password = $_POST['password'];
     $role = $_POST['role'];
-    $status = 'active'; // Default status
+    $status = 'active'; 
 
     try {
-        // Call the create method
-        $user = new User();
-        $user-
+        // $user = new User();
+        // $user-
         $result = User::create($conn, $username, $email, $role, $password, $status);
+        
 
         if ($result === true) {
             // Redirect to the same page to prevent form resubmission
-            header("Location: " . $_SERVER['PHP_SELF']);
+            // header("Location: " . $_SERVER['PHP_SELF']);
+            // var_dump($_SERVER['PHP_SELF']);
+            echo "<script>alert('created succcesfully');</script>";
             exit();
         } else {
+            // var_dump($result);
             // Display error message if user already exists
-            echo "<script>alert('$result');</script>";
+            echo "<script>alert('" . addslashes($result) . "');</script>";
         }
     } catch (Exception $e) {
         // Handle exceptions
