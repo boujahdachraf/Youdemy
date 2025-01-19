@@ -1,7 +1,7 @@
 <?php
 class Database {
     private $host = "localhost";
-    private $db_name = "youdemy_db";
+    private $db_name = "youdemy";
     private $username = "root";
     private $password = "";
     public $conn;
