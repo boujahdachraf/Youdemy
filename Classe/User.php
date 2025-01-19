@@ -17,7 +17,9 @@ abstract class User {
         $this->password = $password;
     }
 
-    public function seDéconnecter() {
+    abstract public function addCours();
+
+    public function seDéconnecter(User $user) {
         session_start();
         session_unset();
         session_destroy();
@@ -110,7 +112,7 @@ abstract class User {
             $result = $stmt->fetch(PDO::FETCH_ASSOC);
     
             if ($result) {
-                return "User already exist.";
+                return new Exception("User already exist.");
             }
     
             $insertQuery = "INSERT INTO Users (username, email, role, password, status) VALUES (:username, :email, :role, :password, :status)";
