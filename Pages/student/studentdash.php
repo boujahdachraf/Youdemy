@@ -1,7 +1,7 @@
 <?php
-require_once '../config/Database.php';
-require_once '../classes/Users.php';
-require_once '../classes/Student.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Users.php';
+require_once '../../classes/Student.php';
 
 session_start();
 

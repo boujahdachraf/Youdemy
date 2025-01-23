@@ -1,8 +1,8 @@
 <?php
-require_once '../config/Database.php';
-require_once '../classes/Users.php';
-require_once '../classes/Teacher.php';
-require_once '../classes/CourseTags.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Users.php';
+require_once '../../classes/Teacher.php';
+require_once '../../classes/CourseTags.php';
 // Create upload directories if they don't exist
 $uploadDirs = [
     'uploads/thumbnails',

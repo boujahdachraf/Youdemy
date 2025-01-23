@@ -1,9 +1,9 @@
 <?php
 // view_enrollments.php
 session_start();
-require_once '../config/Database.php';
-require_once '../classes/Users.php';
-require_once '../classes/Teacher.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Users.php';
+require_once '../../classes/Teacher.php';
 
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'teacher') {
     header('Location: login.php');

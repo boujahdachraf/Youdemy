@@ -1,10 +1,9 @@
 <?php
 session_start();
-require_once '../config/Database.php';
-// require_once 'classes/CrudInterface.php';
-require_once '../classes/Admin.php';
-require_once '../classes/Tags.php';
-require_once '../classes/CourseTags.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Admin.php';
+require_once '../../classes/Tags.php';
+require_once '../../classes/CourseTags.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header('Location: login.php');
@@ -79,7 +78,6 @@ $allTags = $stmt->fetchAll(PDO::FETCH_ASSOC);
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-gray-100">
-    <?php include 'includes/admin_nav.php'; ?>
     
     <div class="container mx-auto px-4 py-8">
         <?php if (isset($_SESSION['message'])): ?>

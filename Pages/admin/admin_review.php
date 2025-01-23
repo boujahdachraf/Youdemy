@@ -1,9 +1,9 @@
 <?php
 // review_course.php
 session_start();
-require_once '../config/Database.php';
-require_once '../classes/Admin.php';
-require_once '../classes/Course.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Admin.php';
+require_once '../../classes/Course.php';
 
 // Security check
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {

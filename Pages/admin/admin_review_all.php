@@ -1,9 +1,9 @@
 <?php
 // review_course.php
 session_start();
-require_once '../config/Database.php';
-require_once '../classes/Admin.php';
-require_once '../classes/Course.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Admin.php';
+require_once '../../classes/Course.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header('Location: login.php');
@@ -51,7 +51,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-gray-100">
-    <?php include 'includes/admin_nav.php'; ?>
     
     <div class="container mx-auto px-4 py-8">
         <h1 class="text-2xl font-bold mb-6">Course Review Dashboard</h1>

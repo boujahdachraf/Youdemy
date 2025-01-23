@@ -1,8 +1,8 @@
 <?php
 // admindash.php
 session_start();
-require_once '../config/Database.php';
-require_once '../classes/Admin.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Admin.php';
 
 // Enhanced security check
 if (!isset($_SESSION['user_id']) || !isset($_SESSION['role']) || $_SESSION['role'] !== 'admin') {
@@ -66,7 +66,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             <h1 class="text-xl font-bold">Youdemy Admin</h1>
             <div class="flex items-center gap-4">
                 <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                <a href="login.php" class="bg-pink-700 px-4 py-2 rounded hover:bg-pink-800">Logout</a>
+                <a href="/Youdemy/pages/login.php" class="bg-pink-700 px-4 py-2 rounded hover:bg-pink-800">Logout</a>
             </div>
         </div>
     </nav>

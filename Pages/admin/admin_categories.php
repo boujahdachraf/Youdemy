@@ -1,8 +1,8 @@
 <?php
 session_start();
-require_once '../config/Database.php';
-require_once '../classes/Admin.php';
-require_once '../classes/Category.php';
+require_once '../../config/Database.php';
+require_once '../../classes/Admin.php';
+require_once '../../classes/Category.php';
 
 if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
     header('Location: login.php');
@@ -12,8 +12,8 @@ if (!isset($_SESSION['user_id']) || $_SESSION['role'] !== 'admin') {
 $database = new Database();
 $db = $database->getConnection();
 $admin = new Admin($db, ['user_id' => $_SESSION['user_id']]);
-$category = new Category($db);
 
+$category = new Category($db);
 // Handle category actions
 if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if (isset($_POST['action'])) {
@@ -54,7 +54,6 @@ $categories = $category->getAll();
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
 </head>
 <body class="bg-gray-100">
-    <?php include 'includes/admin_nav.php'; ?>
     
     <div class="container mx-auto px-4 py-8">
         <?php if (isset($_SESSION['message'])): ?>
@@ -90,7 +89,7 @@ $categories = $category->getAll();
                             <tr class="border-b">
                                 <td class="px-6 py-4"><?php echo htmlspecialchars($cat['name']); ?></td>
                                 <td class="px-6 py-4">
-                                    <?php echo $category->getCourseCount($cat['category_id']); ?>
+                                    <?php echo $category->getCoursesCount($cat['category_id']); ?>
                                 </td>
                                 <td class="px-6 py-4">
                                 <?php echo date('l, F j, Y - h:i A', strtotime($cat['created_at'])); ?>
