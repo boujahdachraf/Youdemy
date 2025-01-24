@@ -169,12 +169,12 @@ $courses = $teacher->getData();
 </head>
 <body class="bg-gray-100">
     <!-- Top Navigation -->
-    <nav class="bg-indigo-600 text-white px-6 py-4">
+    <nav class="bg-amber-500 text-white px-6 py-4">
         <div class="flex justify-between items-center">
-            <h1 class="text-xl font-bold">Youdemy Teacher</h1>
+            <h1 class="text-xl font-bold">Teacher</h1>
             <div class="flex items-center gap-4">
                 <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                <a href="login.php" class="bg-indigo-700 px-4 py-2 rounded hover:bg-indigo-800">Logout</a>
+                <a href="http://localhost/Youdemy/pages/login.php" class="bg-amber-950 px-4 py-2 rounded hover:bg-amber-950">Logout</a>
             </div>
         </div>
     </nav>
@@ -212,7 +212,7 @@ $courses = $teacher->getData();
         <!-- Quick Actions -->
         <div class="mb-8">
             <button onclick="document.getElementById('addCourseModal').classList.remove('hidden')" 
-                    class="bg-indigo-500 text-white px-6 py-2 rounded-lg hover:bg-indigo-600">
+                    class="bg-orange-500 text-white px-6 py-2 rounded-lg hover:bg-orange-500">
                 <i class="fas fa-plus mr-2"></i>Add New Course
             </button>
         </div>
@@ -416,11 +416,6 @@ $courses = $teacher->getData();
                                    class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700">
                             <p class="text-sm text-gray-500 mt-1">Accepted formats: PDF, DOC, DOCX</p>
                         </div>
-                        <div class="mb-4">
-                            <label class="block text-gray-700 text-sm font-bold mb-2">Number of Pages</label>
-                            <input type="number" name="document_pages" min="1"
-                                   class="shadow appearance-none border rounded w-full py-2 px-3 text-gray-700">
-                        </div>
                     </div>
 
                     <!-- Submit Buttons -->
@@ -430,7 +425,7 @@ $courses = $teacher->getData();
                             Cancel
                         </button>
                         <button type="submit"
-                                class="px-4 py-2 bg-indigo-500 text-white rounded hover:bg-indigo-600">
+                                class="px-4 py-2 bg-red-500 text-white rounded hover:bg-red-500">
                             Create Course
                         </button>
                     </div>

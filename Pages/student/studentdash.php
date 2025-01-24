@@ -48,12 +48,12 @@ $totalEnrolled = count($enrolledCourses);
 </head>
 <body class="bg-gray-100">
     <!-- Top Navigation -->
-    <nav class="bg-pink-600 text-white px-6 py-4">
+    <nav class="bg-cyan-400 text-white px-6 py-4">
         <div class="flex justify-between items-center">
-            <h1 class="text-xl font-bold">Youdemy Student</h1>
+            <h1 class="text-xl font-bold">Student</h1>
             <div class="flex items-center gap-4">
                 <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                <a href="login.php" class="bg-pink-700 px-4 py-2 rounded hover:bg-pink-800">Logout</a>
+                <a href="http://localhost/Youdemy/pages/login.php" class="bg-blue-500 px-4 py-2 rounded hover:bg-pink-800">Logout</a>
             </div>
         </div>
     </nav>
@@ -87,7 +87,7 @@ $totalEnrolled = count($enrolledCourses);
                        placeholder="Search courses..." 
                        class="flex-1 p-2 border rounded">
                 <button type="submit" 
-                        class="bg-pink-500 text-white px-6 py-2 rounded hover:bg-pink-600">
+                        class=" bg-teal-800 text-white px-6 py-2 rounded hover:bg-emerald-200">
                     <i class="fas fa-search mr-2"></i>Search
                 </button>
             </form>

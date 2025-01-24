@@ -25,9 +25,9 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 $admin->update($userId, ['is_active' => 1, 'status' => 'accepted']);
                 $_SESSION['message'] = "User activated successfully";
                 break;
-            case 'deactivate':
+            case 'disable':
                 $admin->update($userId, ['is_active' => 0, 'status' => 'suspended']);
-                $_SESSION['message'] = "User deactivated successfully";
+                $_SESSION['message'] = "User disable successfully";
                 break;
             case 'delete':
                 $admin->delete($userId);
@@ -99,9 +99,9 @@ $users = $stmt->fetchAll(PDO::FETCH_ASSOC);
                                                 <i class="fas fa-check mr-1"></i> Activate
                                             </button>
                                         <?php else: ?>
-                                            <button type="submit" name="action" value="deactivate" 
-                                                    class="bg-yellow-500 text-white px-3 py-1 rounded mr-2 hover:bg-yellow-600">
-                                                <i class="fas fa-ban mr-1"></i> Deactivate
+                                            <button type="submit" name="action" value="disable" 
+                                                    class="bg-blue-800 text-white px-3 py-1 rounded mr-2 hover:bg-yellow-600">
+                                                <i class="fas fa-ban mr-1"></i> disable
                                             </button>
                                         <?php endif; ?>
                                         <button type="submit" name="action" value="delete" 
