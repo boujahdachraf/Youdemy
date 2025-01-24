@@ -97,7 +97,6 @@ abstract class Users {
         return $stmt->fetchAll(PDO::FETCH_ASSOC);
     }
 
-    // Interface methods
     public function getRole() { return $this->role; }
     public function getId() { return $this->id; }
     public function getUsername() { return $this->username; }

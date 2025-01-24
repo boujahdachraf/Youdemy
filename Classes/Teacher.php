@@ -56,6 +56,7 @@ class Teacher extends Users {
             $stmt->bindParam(':document_url', $document_url);
     
             if ($stmt->execute()) {
+                //print_r(value: 'executed');
                 return true;
             }
             return false;
