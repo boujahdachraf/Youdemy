@@ -61,7 +61,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 </head>
 <body class="bg-gray-100">
     <!-- Top Navigation -->
-    <nav class="bg-pink-600 text-white px-6 py-4">
+    <nav class="bg-blue-600 text-white px-6 py-4">
     <div class="flex justify-between items-center">
         <!-- Logo -->
         <div class="flex items-center">
@@ -120,10 +120,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             <div class="bg-white rounded-lg shadow p-6">
                 <h2 class="text-xl font-bold mb-4">Course Management</h2>
                 <div class="space-y-4">
-                    <a href="admin_courses.php" class="flex items-center justify-center bg-pink-500 text-white px-4 py-2 rounded hover:bg-pink-600">
+                    <a href="admin_courses.php" class="flex items-center justify-center  bg-red-800 text-white px-4 py-2 rounded-full
+
+ hover:bg-red-800">
                         <i class="fas fa-book-open mr-2"></i> Manage Courses
                     </a>
-                    <a href="admin_categories.php" class="flex items-center justify-center bg-purple-500 text-white px-4 py-2 rounded hover:bg-purple-600">
+                    <a href="admin_categories.php" class="flex items-center justify-center bg-red-800 text-white px-4 py-2 rounded-full
+
+ hover:bg-red-800">
                         <i class="fas fa-tags mr-2"></i> Manage Categories
                     </a>
                 </div>
@@ -132,10 +136,14 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
             <div class="bg-white rounded-lg shadow p-6">
                 <h2 class="text-xl font-bold mb-4">User and Tags Management</h2>
                 <div class="space-y-4">
-                    <a href="admin_tags.php" class="flex items-center justify-center bg-green-500 text-white px-4 py-2 rounded hover:bg-green-600">
+                    <a href="admin_tags.php" class="flex items-center justify-center bg-blue-700 text-white px-4 py-2 rounded-full
+
+ hover:bg-blue-700">
                         <i class="fas fa-user-graduate mr-2"></i> Manage Tags
                     </a>
-                    <a href="admin_users.php" class="flex items-center justify-center bg-yellow-500 text-white px-4 py-2 rounded hover:bg-yellow-600">
+                    <a href="admin_users.php" class="flex items-center justify-center bg-blue-700 text-white px-4 py-2 rounded-full
+
+ hover:bg-blue-700">
                         <i class="fas fa-chalkboard-teacher mr-2"></i> Manage Users
                     </a>
                 </div>
