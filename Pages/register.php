@@ -70,7 +70,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <div class="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 class="text-2xl font-bold mb-6 text-center">Register for Youdemy</h1>
+        <h1 class="text-2xl font-bold mb-6 text-center">Register now</h1>
         
         <?php if (!empty($errors)): ?>
             <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -110,13 +110,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 </select>
             </div>
             
-            <button type="submit" class="w-full bg-pink-500 text-white py-2 rounded hover:bg-pink-600">
+            <button type="submit" class="w-full bg-blue-700 text-white py-2 rounded-full hover:bg-green-500">
                 Register
             </button>
         </form>
         
         <p class="mt-4 text-center text-gray-600">
-            Already have an account? <a href="login.php" class="text-pink-500 hover:underline">Login</a>
+            Already have an account? <a href="login.php" class="text-green-500 hover:underline">Login</a>
         </p>
     </div>
 </body>

@@ -62,14 +62,18 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST' && isset($_POST['action'])) {
 <body class="bg-gray-100">
     <!-- Top Navigation -->
     <nav class="bg-pink-600 text-white px-6 py-4">
-        <div class="flex justify-between items-center">
-            <h1 class="text-xl font-bold">Youdemy Admin</h1>
-            <div class="flex items-center gap-4">
-                <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
-                <a href="/Youdemy/pages/login.php" class="bg-pink-700 px-4 py-2 rounded hover:bg-pink-800">Logout</a>
-            </div>
+    <div class="flex justify-between items-center">
+        <!-- Logo -->
+        <div class="flex items-center">
+            <img src="\src\e-learning-logo.png" alt="Youdemy Logo" class="h-8 w-auto">
         </div>
-    </nav>
+        <!-- User Info and Logout -->
+        <div class="flex items-center gap-4">
+            <span>Welcome, <?php echo htmlspecialchars($_SESSION['username']); ?></span>
+            <a href="/Youdemy/pages/login.php" class="bg-pink-700 px-4 py-2 rounded hover:bg-pink-800">Logout</a>
+        </div>
+    </div>
+</nav>
 
     <div class="container mx-auto px-4 py-8">
         <?php if (isset($_SESSION['message'])): ?>

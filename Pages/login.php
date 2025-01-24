@@ -58,7 +58,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 </head>
 <body class="bg-gray-100 min-h-screen flex items-center justify-center">
     <div class="bg-white p-8 rounded-lg shadow-md w-96">
-        <h1 class="text-2xl font-bold mb-6 text-center">Login to Youdemy</h1>
+        <h1 class="text-2xl font-bold mb-6 text-center">Log in to continue your learning journey
+        </h1>
         
         <?php if (!empty($errors)): ?>
             <div class="bg-red-100 border border-red-400 text-red-700 px-4 py-3 rounded mb-4">
@@ -79,13 +80,13 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
                 <input type="password" name="password" class="w-full border rounded px-3 py-2" required>
             </div>
             
-            <button type="submit" class="w-full bg-pink-500 text-white py-2 rounded hover:bg-pink-600">
+            <button type="submit" class="w-full bg-green-500 text-white py-2 rounded-full  hover:bg-blue-700">
                 Login
             </button>
         </form>
         
         <p class="mt-4 text-center text-gray-600">
-            Don't have an account? <a href="register.php" class="text-pink-500 hover:underline">Register</a>
+            Don't have an account? <a href="register.php" class="text-blue-700 hover:underline">Register</a>
         </p>
     </div>
 </body>
